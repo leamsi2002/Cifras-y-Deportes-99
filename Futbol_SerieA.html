@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cifras y Deportes 99</title>
+    <link rel="stylesheet" href="css/style_Futbol_SerieA.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+    <link rel="website icon" type="jpg" href="img/Logotipo.jpg">
+</head>
+<body style="background-image: url(img/Fondos/fondo_futbol.jpg);">
+<header>
+    <div class="logo">
+        <img src="img/Logotipo.jpg"  alt="Logotipo"><h1>Cifras y Deportes 99</h1>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="index.html"><span class="material-symbols-outlined">home</span>Inicio</a></li>
+            <li><a href="Quinielas.html"><span class="material-symbols-outlined">poker_chip</span>Quinielas</a></li>
+            <li><a href="Futbol.html"><span class="material-symbols-outlined">sports_soccer</span>Futbol</a></li>
+        </ul>
+    </nav>
+</header>
+<main>
+    <h1>Futbol</h1>
+    <p>En esta sección podrás observar <span style="background-color: rgb(0, 0, 0); font-weight: 700; color: white;">resultados de cada jornada</span> para cada una de las ligas.</p>
+    <p>Además, mostramos la <span  style="background-color: rgb(19, 223, 0); font-weight: 700;">tabla de posiciones</span> una vez que la jornada finalice.</p>
+    <h2 style="background-color: rgb(255, 166, 0); width: 40%; margin-left: 30%;">Haz click en la liga que prefieras.</h2>
+
+    <div class="card-futbol">
+    
+    <a href="Futbol_LigaMX.html"><div class="cardMX">
+        <img src="img/Equipos/Liga_MX/Logo - Liga MX.png" height="125">
+    </div></a>
+    <a href="Futbol_Bundesliga.html"><div class="cardBundesliga">
+        <img src="img/Equipos/Bundesliga/Logo - Bundesliga.png" height="125">
+    </div></a>
+    <a href="Futbol_Premier.html"><div class="cardPremier">
+        <img src="img/Equipos/Premier_League/Premier_League_logo.png" height="125">
+    </div></a>
+    <a href="Futbol_Ligue1.html"><div class="cardLigue1">
+        <img src="img/Equipos/Ligue_1/Logo_Ligue_1.png" height="125">
+    </div></a>
+    <a href="Futbol_LaLiga.html"><div class="cardLaLiga">
+        <img src="img/Equipos/La_Liga/Logo - La Liga.png" height="125">
+    </div></a>
+    <a href="Futbol_SerieA.html"><div class="cardSerieA">
+        <img src="img/Equipos/Serie_A/Serie_A_logo.png" height="125">
+    </div></a>
+    
+    </div>
+
+    <h1>Serie A</h1>
+
+    <h2 style="background-color: yellow; width: 80%; margin-left: 10%;">Selecciona la jornada para observar resultados y posiciones de los equipos.</h2>
+
+    <nav>
+        <ul>
+            <li><a href="Futbol_SerieA_J30.html">Jornada 30</a></li>
+            <li><a href="Futbol_SerieA_J31.html">Jornada 31</a></li>
+        </ul>
+    </nav>
+</main>
+<footer>
+    
+</footer>
+<script>
+  window.addEventListener('scroll', () => {
+    sessionStorage.setItem('scrollPosition', window.scrollY);
+  });
+
+  window.addEventListener('load', () => {
+    if (sessionStorage.getItem('scrollPosition') !== null) {
+      window.scrollTo({
+        top: sessionStorage.getItem('scrollPosition'),
+        behavior: 'smooth'
+        });
+    }
+  });
+</script>
+</body>
+</html>
