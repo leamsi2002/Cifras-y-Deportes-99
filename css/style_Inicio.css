@@ -150,6 +150,15 @@ main a{
     transform: scale(1.2);
 }
 
+.cardMundial26{
+    background-color: rgb(0, 0, 0);
+}
+
+.cardMundial26:hover{
+    transition: all ease 500ms;
+    transform: scale(1.2);
+}
+
 .beisbol {
     height: 500px;
     background-size: 80%;
