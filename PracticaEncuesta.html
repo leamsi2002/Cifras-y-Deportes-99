@@ -9,21 +9,6 @@
     src="https://code.jquery.com/jquery-4.0.0.js"
     integrity="sha256-9fsHeVnKBvqh3FB2HYu7g2xseAZ5MlN6Kz/qnkASV8U="
     crossorigin="anonymous"></script>
-    <script>
-        function SubForm (){
-            $.ajax({
-                url:"https://api.apispreadsheets.com/data/KqEEqYDD6EhAOgAm/",
-                type:"post",
-                data:$("#Quiniela_MX").serializeArray(),
-                success: function(){
-                    alert("Form Data Submitted :)")
-                },
-                error: function(){
-                    alert("There was an error :(")
-                }
-            });
-        }
-    </script>
 </head>
 <body style="background-image: url(img/Fondos/fondo_quinielas.jpg);">
 <header>
@@ -42,83 +27,112 @@
     <div class="container">
         <header class="titulo">
             <img src="img/Equipos/Liga_MX/Logo - Liga MX.png" width="140px">
-            <h1 class="centrar-texto">Jornada 1</h1>
+            <h1 class="centrar-texto">Jornada 4</h1>
             <p class="header_descripcion centrar-texto">Escribe tu nombre / alias y después selecciona tu pronóstico para cada uno de los encuentros:</p>
             <p class="header_descripcion centrar-texto">Si gana el local (L), si empatan (E) ó si gana el visitante (V).</p>
         </header>
 
-        <form class="formulario" id="Quiniela_MX">
+        <form class="formulario" id="Quiniela_MX" method="post">
             <div class="campo">
                 <label for="nombre" style="background-color: rgb(255, 166, 0); color: black;">Nombre / Alias</label>
-                <input type="text" name="nombre" placeholder="Escriba su nombre / alias" required class="campo_input" />
+                <input type="text" id="Nombre" name="Nombre" placeholder="Escriba su nombre / alias" required class="campo_input" />
             </div>
 
-            <div class="campo">
-                <p style="background-color: rgb(255, 166, 0);color: black;">Seleccione su pronóstico para cada encuentro</p>
-                <label style="margin-right: 2.25rem;">L</label>
-                <label style="margin-right: 2.25rem; margin-left: 2.25rem;">E</label>
-                <label style="margin-left: 2.25rem;">V</label>
-            </div>
+            <p style="background-color: rgb(255, 166, 0);color: black;">Seleccione su pronóstico para cada encuentro</p>
+            
+            <table style="margin: 0 auto;">
+            <tr>
+                <td></td>
+                <td style="background-color: white;"><label>L</label></td>
+                <td style="background-color: white;"><label>E</label></td>
+                <td style="background-color: white;"><label>V</label></td>
+                <td></td>
+            </tr>
+
+            <tr>
+                <td><label><img src="img/Equipos/Liga_MX/Atlante.png" height="70px"></label></td>
+                <td><label><input type="radio" id="P1L" name="Partido1" value="Atlante" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P1E" name="Partido1" value="Empate" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P1V" name="Partido1" value="Toluca" class="campo_radio" required /></label></td>
+                <td><label><img src="img/Equipos/Liga_MX/Toluca.png" height="70px"></label></td>
+            </tr>
+
+            <tr>
+                <td><label><img src="img/Equipos/Liga_MX/Monterrey.png" height="75px"></label></td>
+                <td><label><input type="radio" id="P2L" name="Partido2" value="Monterrey" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P2E" name="Partido2" value="Empate" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P2V" name="Partido2" value="Juárez" class="campo_radio" required /></label></td>
+                <td><label><img src="img/Equipos/Liga_MX/Juárez.png" height="70px"></label></td>
+            </tr>
+
+            <tr>
+                <td><label><img src="img/Equipos/Liga_MX/Atlas.png" height="70px"></label></td>
+                <td><label><input type="radio" id="P3L" name="Partido3" value="Atlas" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P3E" name="Partido3" value="Empate" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P3V" name="Partido3" value="Tigres" class="campo_radio" required /></label></td>
+                <td><label><img src="img/Equipos/Liga_MX/Tigres.png" height="70px"></label></td>
+            </tr>
+
+            <tr>
+                <td><label><img src="img/Equipos/Liga_MX/Pumas.png" height="65px"></label></td>
+                <td><label><input type="radio" id="P4L" name="Partido4" value="Pumas" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P4E" name="Partido4" value="Empate" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P4V" name="Partido4" value="Querétaro" class="campo_radio" required /></label></td>
+                <td><label><img src="img/Equipos/Liga_MX/Querétaro.png" height="65px"></label></td>
+            </tr>
+
+            <tr>
+                <td><label><img src="img/Equipos/Liga_MX/América.png" height="70px"></label></td>
+                <td><label><input type="radio" id="P5L" name="Partido5" value="América" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P5E" name="Partido5" value="Empate" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P5V" name="Partido5" value="San Luis" class="campo_radio" required /></label></td>
+                <td><label><img src="img/Equipos/Liga_MX/San Luis.png" height="70px"></label></td>
+            </tr>
+
+            <tr>
+                <td><label><img src="img/Equipos/Liga_MX/Santos.png" height="70px"></label></td>
+                <td><label><input type="radio" id="P6L" name="Partido6" value="Santos" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P6E" name="Partido6" value="Empate" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P6V" name="Partido6" value="Chivas" class="campo_radio" required /></label></td>
+                <td><label><img src="img/Equipos/Liga_MX/Guadalajara.png" height="70px"></label></td>
+            </tr>
+
+            <tr>
+                <td><label><img src="img/Equipos/Liga_MX/Tijuana.png" height="65px"></label></td>
+                <td><label><input type="radio" id="P7L" name="Partido7" value="Tijuana" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P7E" name="Partido7" value="Empate" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P7V" name="Partido7" value="Cruz Azul" class="campo_radio" required /></label></td>
+                <td><label><img src="img/Equipos/Liga_MX/Cruz Azul.png" height="65px"></label></td>
+            </tr>
+
+            <tr>
+                <td><label><img src="img/Equipos/Liga_MX/Necaxa.png" height="60px"></label></td>
+                <td><label><input type="radio" id="P8L" name="Partido8" value="Necaxa" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P8E" name="Partido8" value="Empate" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P8V" name="Partido8" value="León" class="campo_radio" required /></label></td>
+                <td><label><img src="img/Equipos/Liga_MX/León.png" height="65px"></label></td>
+            </tr>
+
+            <tr>
+                <td><label><img src="img/Equipos/Liga_MX/Pachuca.png" height="70px"></label></td>
+                <td><label><input type="radio" id="P9L" name="Partido9" value="Pachuca" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P9E" name="Partido9" value="Empate" class="campo_radio" required /></label></td>
+                <td><label><input type="radio" id="P9V" name="Partido9" value="Puebla" class="campo_radio" required /></label></td>
+                <td><label><img src="img/Equipos/Liga_MX/Puebla.png" height="65px"></label></td>
+            </tr>
+            </table>
 
             <div class="campo">
-                <label><img src="img/Equipos/Liga_MX/Atlas.png" height="70px"></label>
-                <label><input type="radio" id="Partido1" name="Partido1" value="Atlas" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido1" name="Partido1" value="Empate" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido1" name="Partido1" value="Puebla" class="campo_radio" required /></label>
-                <label><img src="img/Equipos/Liga_MX/Puebla.png" height="60px"></label>
-            </div>
-
-            <div class="campo">
-                <label><img src="img/Equipos/Liga_MX/Guadalajara.png" height="70px"></label>
-                <label><input type="radio" id="Partido2" name="Partido2" value="Chivas" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido2" name="Partido2" value="Empate" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido2" name="Partido2" value="Cruz Azul" class="campo_radio" required /></label>
-                <label><img src="img/Equipos/Liga_MX/Cruz Azul.png" height="60px"></label>
-            </div>
-
-            <div class="campo">
-                <label><img src="img/Equipos/Liga_MX/Tigres.png" height="70px"></label>
-                <label><input type="radio" id="Partido3" name="Partido3" value="Tigres" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido3" name="Partido3" value="Empate" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido3" name="Partido3" value="Toluca" class="campo_radio" required /></label>
-                <label><img src="img/Equipos/Liga_MX/Toluca.png" height="60px"></label>
-            </div>
-
-            <div class="campo">
-                <label><img src="img/Equipos/Liga_MX/Tijuana.png" height="70px"></label>
-                <label><input type="radio" id="Partido4" name="Partido4" value="Tijuana" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido4" name="Partido4" value="Empate" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido4" name="Partido4" value="Pumas" class="campo_radio" required /></label>
-                <label><img src="img/Equipos/Liga_MX/Pumas.png" height="60px"></label>
-            </div>
-
-            <div class="campo">
-                <label><img src="img/Equipos/Liga_MX/Pachuca.png" height="70px"></label>
-                <label><input type="radio" id="Partido5" name="Partido5" value="Pachuca" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido5" name="Partido5" value="Empate" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido5" name="Partido5" value="Querétaro" class="campo_radio" required /></label>
-                <label><img src="img/Equipos/Liga_MX/Querétaro.png" height="60px"></label>
-            </div>
-
-            <div class="campo">
-                <label><img src="img/Equipos/Liga_MX/San Luis.png" height="70px"></label>
-                <label><input type="radio" id="Partido6" name="Partido6" value="San Luis" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido6" name="Partido6" value="Empate" class="campo_radio" required /></label>
-                <label><input type="radio" id="Partido6" name="Partido6" value="América" class="campo_radio" required /></label>
-                <label><img src="img/Equipos/Liga_MX/América.png" height="60px"></label>
-            </div>
-
-            <div class="campo">
-                <input type="submit" value="Enviar" onclick="SubForm()" class="campo_submit">
+                <input type="submit" class="campo_submit" id="submit-button">
             </div>
 
         </form>
-        <button onclick="SubForm()">Submit</button>
+
     </div>
 </main>
 <footer>
     
 </footer>
-
+<script src="js/FormWhatsApp.js"></script>
 </body>
 </html>
