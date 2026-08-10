@@ -35,6 +35,7 @@ let intervalo = setInterval(() => {
     if(distancia < 0) {
         clearInterval(intervalo);
         cuentaAtras.innerHTML = "<p style='background-color: rgb(255, 187, 0); font-size: 5em;'>¡Se cierra la participación!</p>";
+        document.getElementById("submit-button").disabled = true;
     }
 
 }, 1000)
