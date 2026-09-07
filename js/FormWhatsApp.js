@@ -15,11 +15,10 @@ form.addEventListener("submit",function (e) {
     Res7 = document.querySelector('input[name="Partido7"]:checked').value;
     Res8 = document.querySelector('input[name="Partido8"]:checked').value;
     Res9 = document.querySelector('input[name="Partido9"]:checked').value;
-    Res10 = document.querySelector('input[name="Partido10"]:checked').value;
 
     const celular = 523343778902
     const text = encodeURIComponent(
-        "*Pronósticos Jornada 7 Liga MX*\n" +
+        "*Pronósticos Jornada 8 Liga MX*\n" +
         "------------------------------------\n" +
         "*Nombre / Alias*: _"+nombre+"_\n" +
         "------------------------------------\n" +
@@ -32,8 +31,7 @@ form.addEventListener("submit",function (e) {
         "Partido 6: *"+Res6+"*\n" +
         "Partido 7: *"+Res7+"*\n" +
         "Partido 8: *"+Res8+"*\n" +
-        "Partido 9: *"+Res9+"*\n" +
-        "Partido 10: *"+Res10+"*"
+        "Partido 9: *"+Res9+"*"
     )
 
     var formData = new FormData(this);
