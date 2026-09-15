@@ -18,7 +18,7 @@ form.addEventListener("submit",function (e) {
 
     const celular = 523343778902
     const text = encodeURIComponent(
-        "*Pronósticos Jornada 8 Liga MX*\n" +
+        "*Pronósticos Jornada 9 Liga MX*\n" +
         "------------------------------------\n" +
         "*Nombre / Alias*: _"+nombre+"_\n" +
         "------------------------------------\n" +
