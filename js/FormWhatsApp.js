@@ -18,7 +18,7 @@ form.addEventListener("submit",function (e) {
 
     const celular = 523343778902
     const text = encodeURIComponent(
-        "*Pronósticos Jornada 12 Liga MX*\n" +
+        "*Pronósticos Jornada 13 (JORNADA DOBLE) Liga MX*\n" +
         "------------------------------------\n" +
         "*Nombre / Alias*: _"+nombre+"_\n" +
         "------------------------------------\n" +
